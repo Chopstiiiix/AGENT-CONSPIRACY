@@ -1,12 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
-import Stripe from "stripe";
+import type Stripe from "stripe";
+import { getStripe } from "@/lib/stripe";
 import { createServerClient } from "@/lib/supabase";
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
-  apiVersion: "2026-02-25.clover",
-});
-
 export async function POST(req: NextRequest) {
+  const stripe = getStripe();
   const body = await req.text();
   const sig = req.headers.get("stripe-signature");
 
@@ -35,7 +33,6 @@ export async function POST(req: NextRequest) {
     if (agentSlug && userId && billingPeriod) {
       const supabase = createServerClient();
 
-      // Look up agent id
       const { data: agent } = await supabase
         .from("agents")
         .select("id")

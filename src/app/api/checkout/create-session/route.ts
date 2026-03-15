@@ -1,10 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
-import Stripe from "stripe";
+import type Stripe from "stripe";
+import { getStripe } from "@/lib/stripe";
 import { getAgentBySlug } from "@/lib/data/queries";
-
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
-  apiVersion: "2026-02-25.clover",
-});
 
 const PRICE_KEY: Record<string, "hourly" | "daily" | "monthly" | "yearly"> = {
   hourly: "hourly",
@@ -34,6 +31,8 @@ export async function POST(req: NextRequest) {
   const isRecurring = billingPeriod === "monthly" || billingPeriod === "yearly";
 
   const origin = req.nextUrl.origin;
+
+  const stripe = getStripe();
 
   const sessionParams: Stripe.Checkout.SessionCreateParams = {
     mode: isRecurring ? "subscription" : "payment",
