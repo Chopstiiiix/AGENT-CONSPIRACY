@@ -16,25 +16,25 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider
-      appearance={{
-        baseTheme: dark,
-        variables: {
-          colorPrimary: "#00ff88",
-          colorBackground: "#070f09",
-          colorText: "#ccffd9",
-          colorInputBackground: "#0c1608",
-          colorInputText: "#ccffd9",
-          borderRadius: "0.25rem",
-        },
-      }}
-    >
-      <html lang="en">
-        <body className="antialiased">
+    <html lang="en">
+      <body className="antialiased">
+        <ClerkProvider
+          appearance={{
+            baseTheme: dark,
+            variables: {
+              colorPrimary: "#00ff88",
+              colorBackground: "#070f09",
+              colorText: "#ccffd9",
+              colorInputBackground: "#0c1608",
+              colorInputText: "#ccffd9",
+              borderRadius: "0.25rem",
+            },
+          }}
+        >
           <Navbar />
           {children}
-        </body>
-      </html>
-    </ClerkProvider>
+        </ClerkProvider>
+      </body>
+    </html>
   );
 }
