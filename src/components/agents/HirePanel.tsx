@@ -98,6 +98,22 @@ export function HirePanel({ agent }: { agent: AgentData }) {
           DEPLOY AGENT →
         </button>
 
+        {/* Try agent button (only for agents with chat) */}
+        {agent.slug === "emily" && (
+          <button
+            onClick={() => router.push(`/agents/emily/chat`)}
+            className="w-full py-3 text-[11px] tracking-[2px] font-semibold transition-all duration-200 cursor-pointer hover:shadow-[0_0_20px_rgba(0,212,255,0.2)]"
+            style={{
+              fontFamily: "var(--font-heading)",
+              background: "transparent",
+              color: "var(--cyan)",
+              border: "1px solid var(--cyan)",
+            }}
+          >
+            TALK TO EMILY →
+          </button>
+        )}
+
         <p
           className="text-center text-[10px]"
           style={{ fontFamily: "var(--font-mono)", color: "var(--text-tertiary)" }}

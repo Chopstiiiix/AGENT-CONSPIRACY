@@ -29,7 +29,7 @@ function CheckoutContent() {
     }
   }, [isLoaded, isSignedIn, router, searchParams]);
 
-  const agentSlug = searchParams.get("agent") ?? "nora-7";
+  const agentSlug = searchParams.get("agent") ?? "emily";
   const initialPeriod = searchParams.get("period") ?? "daily";
   const agent = getAgentBySlug(agentSlug);
 

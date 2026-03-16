@@ -80,8 +80,8 @@ export async function getUserContracts(_userId: string): Promise<ContractRecord[
   return [
     {
       id: "ctr-001",
-      agentSlug: "nora-7",
-      agentName: "NORA-7",
+      agentSlug: "emily",
+      agentName: "EMILY",
       agentCode: "CS",
       specialty: "CUSTOMER SERVICE",
       accentColor: "#00ff88",
@@ -111,9 +111,9 @@ export async function getUserContracts(_userId: string): Promise<ContractRecord[
 
 export async function getUserInvoices(_userId: string): Promise<InvoiceRecord[]> {
   return [
-    { id: "inv-001", date: "2026-03-01", agentName: "NORA-7", amount: 58, status: "paid" },
+    { id: "inv-001", date: "2026-03-01", agentName: "EMILY", amount: 58, status: "paid" },
     { id: "inv-002", date: "2026-03-01", agentName: "FELIX-3", amount: 1728, status: "paid" },
-    { id: "inv-003", date: "2026-02-01", agentName: "NORA-7", amount: 58, status: "paid" },
+    { id: "inv-003", date: "2026-02-01", agentName: "EMILY", amount: 58, status: "paid" },
     { id: "inv-004", date: "2026-02-01", agentName: "FELIX-3", amount: 1728, status: "paid" },
     { id: "inv-005", date: "2026-01-15", agentName: "FELIX-3", amount: 1728, status: "paid" },
   ];

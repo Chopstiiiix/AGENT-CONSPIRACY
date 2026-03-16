@@ -22,8 +22,8 @@ export interface AgentData {
 
 export const agents: AgentData[] = [
   {
-    slug: "nora-7",
-    name: "NORA-7",
+    slug: "emily",
+    name: "EMILY",
     code: "CS",
     specialty: "CUSTOMER SERVICE",
     accentColor: "#00ff88",
@@ -34,9 +34,9 @@ export const agents: AgentData[] = [
     uptime: "99.98%",
     responseTime: "0.4s",
     bio: [
-      "NORA-7 is a seventh-generation customer service agent designed for high-volume enterprise support operations. Trained on 12M+ resolved tickets across SaaS, e-commerce, and fintech verticals, NORA-7 handles tier-1 and tier-2 inquiries with near-human empathy and sub-second response latency.",
-      "Equipped with adaptive tone calibration, NORA-7 adjusts communication style per customer sentiment in real time. She integrates natively with major helpdesk platforms and can escalate to human operators when confidence drops below configurable thresholds.",
-      "NORA-7 continuously learns from resolution feedback loops, improving accuracy weekly. Current deployments report 34% reduction in average handle time and 22% improvement in CSAT scores within the first 30 days.",
+      "Emily is a seventh-generation customer service agent designed for high-volume enterprise support operations. Trained on 12M+ resolved tickets across SaaS, e-commerce, and fintech verticals, Emily handles tier-1 and tier-2 inquiries with near-human empathy and sub-second response latency.",
+      "Equipped with adaptive tone calibration, Emily adjusts communication style per customer sentiment in real time. She integrates natively with major helpdesk platforms and can escalate to human operators when confidence drops below configurable thresholds.",
+      "Emily continuously learns from resolution feedback loops, improving accuracy weekly. Current deployments report 34% reduction in average handle time and 22% improvement in CSAT scores within the first 30 days.",
     ],
     capabilities: [
       "Multi-channel support (chat, email, voice)",
@@ -66,10 +66,10 @@ export const agents: AgentData[] = [
       { name: "Webhooks", icon: "Webhook", description: "Push real-time events to any endpoint. Custom payload templates." },
     ],
     reviews: [
-      { company: "Meridian SaaS", stars: 5, date: "2025-12-14", text: "NORA-7 cut our ticket backlog by 60% in three weeks. The tone calibration is genuinely impressive — customers couldn't tell they were talking to an agent." },
-      { company: "Vaultline Fintech", stars: 5, date: "2025-11-28", text: "We deployed NORA-7 across three support channels and saw CSAT jump from 4.1 to 4.6 within the first month. The escalation logic is smart and configurable." },
+      { company: "Meridian SaaS", stars: 5, date: "2025-12-14", text: "EMILY cut our ticket backlog by 60% in three weeks. The tone calibration is genuinely impressive — customers couldn't tell they were talking to an agent." },
+      { company: "Vaultline Fintech", stars: 5, date: "2025-11-28", text: "We deployed EMILY across three support channels and saw CSAT jump from 4.1 to 4.6 within the first month. The escalation logic is smart and configurable." },
       { company: "Noctis Commerce", stars: 4, date: "2025-11-03", text: "Excellent for standard queries. Struggles occasionally with edge-case refund policies but learns fast from corrections. Would recommend for any mid-size e-commerce team." },
-      { company: "Stratos Health", stars: 5, date: "2025-10-19", text: "The multilingual support is a game changer. We serve 14 markets and NORA-7 handles them all without dedicated localisation work." },
+      { company: "Stratos Health", stars: 5, date: "2025-10-19", text: "The multilingual support is a game changer. We serve 14 markets and EMILY handles them all without dedicated localisation work." },
     ],
     instances: 247,
     lastTrained: "2026-03-12",

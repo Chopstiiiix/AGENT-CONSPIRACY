@@ -3,16 +3,16 @@
 import { motion } from "framer-motion";
 
 const ACTIVITY_ITEMS = [
-  { time: "14:32:07", agent: "NORA-7", action: "Resolved ticket #4821 — order status query", color: "#00ff88" },
+  { time: "14:32:07", agent: "EMILY", action: "Resolved ticket #4821 — order status query", color: "#00ff88" },
   { time: "14:31:44", agent: "FELIX-3", action: "Reconciled 47 transactions — March batch", color: "#00d4ff" },
-  { time: "14:29:18", agent: "NORA-7", action: "Escalated ticket #4819 to human operator — low confidence", color: "#00ff88" },
+  { time: "14:29:18", agent: "EMILY", action: "Escalated ticket #4819 to human operator — low confidence", color: "#00ff88" },
   { time: "14:27:55", agent: "FELIX-3", action: "Generated weekly P&L summary report", color: "#00d4ff" },
-  { time: "14:25:02", agent: "NORA-7", action: "Processed refund $42.99 — order #91204", color: "#00ff88" },
-  { time: "14:22:31", agent: "NORA-7", action: "Resolved ticket #4818 — shipping delay inquiry", color: "#00ff88" },
+  { time: "14:25:02", agent: "EMILY", action: "Processed refund $42.99 — order #91204", color: "#00ff88" },
+  { time: "14:22:31", agent: "EMILY", action: "Resolved ticket #4818 — shipping delay inquiry", color: "#00ff88" },
   { time: "14:19:47", agent: "FELIX-3", action: "Categorised 23 expense entries — travel & meals", color: "#00d4ff" },
-  { time: "14:17:12", agent: "NORA-7", action: "Updated knowledge base — new return policy v3.2", color: "#00ff88" },
+  { time: "14:17:12", agent: "EMILY", action: "Updated knowledge base — new return policy v3.2", color: "#00ff88" },
   { time: "14:14:08", agent: "FELIX-3", action: "Flagged duplicate invoice #INV-4401", color: "#00d4ff" },
-  { time: "14:11:33", agent: "NORA-7", action: "Resolved ticket #4816 — password reset assistance", color: "#00ff88" },
+  { time: "14:11:33", agent: "EMILY", action: "Resolved ticket #4816 — password reset assistance", color: "#00ff88" },
 ];
 
 export function ActivityFeed() {
