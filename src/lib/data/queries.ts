@@ -1,4 +1,5 @@
 import { agents as seedAgents, type AgentData } from "./agents";
+import { AGENT_CATEGORIES } from "@/lib/constants";
 
 // ─────────────────────────────────────────────────────────────────────
 // Query layer — currently reads from the hardcoded seed data.
@@ -16,9 +17,15 @@ export async function getAgents(filters?: AgentFilters): Promise<AgentData[]> {
   let results = [...seedAgents];
 
   if (filters?.category) {
+    // Resolve category id (e.g. "customer-service") to code (e.g. "CS")
+    const cat = AGENT_CATEGORIES.find((c) => c.id === filters.category);
+    const code = cat?.code?.toLowerCase();
+
     results = results.filter(
-      (a) => a.code.toLowerCase() === filters.category!.toLowerCase() ||
-             a.specialty.toLowerCase().includes(filters.category!.toLowerCase()),
+      (a) =>
+        (code && a.code.toLowerCase() === code) ||
+        a.code.toLowerCase() === filters.category!.toLowerCase() ||
+        a.specialty.toLowerCase().includes(filters.category!.toLowerCase()),
     );
   }
 
